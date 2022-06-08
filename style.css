@@ -1,0 +1,296 @@
+/* // color
+$titleColor:   rgba(116,148,192,0.9); //タイトル背景色
+$baseColor:    #7494c0; // 背景色
+$myTextColor:  #8de055; // 吹き出しの色 */
+
+body {
+    background: rgb(146,178,222);
+}
+
+.container {
+    padding: 0;
+    background: rgb(136,168,222);
+    overflow: hidden;
+    max-width: 450px;
+    margin: 0px auto;
+    font-size: 11.5pt;
+}
+
+.container .title {
+    background: rgba(136,168,222,0.9);
+    padding: 10px 30px 10px 30px;
+    font-weight: bold;
+}
+
+.container .contents {
+    position: relative;
+    padding: 10px;
+    overflow: hidden;
+    line-height: 135%;
+}
+
+.partner {
+    position: relative;
+    display: block;
+    margin-bottom: 5px;
+    max-width: 350px;
+    clear: both;
+}
+
+.partner .text {
+    display: inline-block;
+    position: relative;
+    margin-left: 30px;
+    width: fit-content;
+    max-width: 230px;
+    padding: 6px 13px 3px 13px;
+    border-radius: 15px;
+    background-color: white;
+    /* float: left; */
+    vertical-align: bottom;
+}
+
+.partner:before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    border-radius:50%;
+    display: block;
+    position: absolute;
+    background: rgb(200,200,200);
+}
+
+.partner .time {
+    display: inline-block;
+    position: relative;
+    width: fit-content;
+    font-size: 6pt;
+    color: rgb(70,70,70);
+    /* float: left; */
+    margin-left: 2px;
+    vertical-align: bottom;
+    /* align-items: flex-end; */
+    transform: translateY(-10%);
+}
+
+.me {
+    position: relative;
+    right: 0;
+    display: block;
+    float: right;
+    margin-bottom: 5px;
+    max-width: 263px;
+    height: fit-content;
+    position: relative;
+    clear: both;
+}
+
+.me .text {
+    display: inline-flex;
+    width: fit-content;
+    position: relative;
+    justify-content: flex-end;
+    padding: 6px 13px 3px 13px;
+    border-radius: 15px;
+    background-color: #7de875;
+    vertical-align: bottom;
+    float: right;
+    margin-left: 7px;
+}
+
+.me .time {
+    display: inline-block;
+    position: absolute;
+    width: fit-content;
+    font-size: 6pt;
+    color: rgb(70,70,70);
+    /* float: right; */
+    margin-right: 2px;
+    bottom: -2px;
+    /* align-items: flex-end; */
+    transform: translateX(-100%);
+}
+
+/* 
+------- date -------
+ */
+
+.date, .message {
+    position: relative;
+    font-size: 8pt;
+    color: white;
+    background-color: rgba(100,100,100,0.3);
+    width: fit-content;
+    padding: 0px 10px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    clear: both;
+}
+
+/* 
+------- object -------
+ */
+
+.partner .photo, .partner .stamp, .partner .album {
+    display: inline-block;
+    margin-left: 30px;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 10px;
+    background-color: rgba(100,100,100,0.3);
+}
+
+.me .photo, .me .stamp, .me .album {
+    display: flex;
+    margin-left: 7px;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 10px;
+    background-color: rgba(100,100,100,0.3);
+}
+
+.partner .file {
+    display: inline-block;
+    margin-left: 30px;
+    width: 150px;
+    height: 50px;
+    position: relative;
+    border-radius: 10px;
+    background-color: rgba(100,100,100,0.3);
+}
+
+.me .file {
+    display: flex;
+    margin-left: 7px;
+    width: 150px;
+    height: 50px;
+    position: relative;
+    border-radius: 10px;
+    background-color: rgba(100,100,100,0.3);
+}
+
+.photo:after {
+    content: "Photo";
+    color: rgb(220,220,220);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.album:after {
+    content: "Album";
+    color: rgb(220,220,220);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.stamp:after {
+    content: "Stamp";
+    color: rgb(220,220,220);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.file:after {
+    content: "File";
+    color: rgb(220,220,220);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 
+------- call -------
+ */
+
+.partner .call {
+    display: inline-block;
+    position: relative;
+    margin-left: 30px;
+    width: 130px;
+    height: 45px;
+    padding: 6px 13px 3px 13px;
+    border-radius: 15px;
+    background-color: white;
+    /* float: left; */
+    vertical-align: bottom;
+}
+
+.me .call {
+    display: inline-flex;
+    width: 130px;
+    height: 45px;
+    position: relative;
+    padding: 6px 13px 3px 13px;
+    border-radius: 15px;
+    background-color: #7de875;
+    vertical-align: bottom;
+    float: right;
+    margin-left: 7px;
+}
+
+.call .text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 9.5pt;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.call .icon {
+    width: 30px;
+    height: 30px;
+    border-radius:50%;
+    display: block;
+    position: relative;
+    background: rgb(240,240,240);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.partner .call .icon {
+    background: rgb(240,240,240);
+}
+
+.me .call .icon {
+    background: #71e067;
+}
+
+.call .icon:before {
+    font-family: "Material Icons";
+    content: "\e0b0";
+    font-weight: bold;
+    font-size: 12.5pt;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.calltime {
+    display: block;
+    font-size: 6pt;
+    font-weight: normal;
+    color: rgb(70,70,70);
+    line-height: 1.2;
+}
+
+/* 
+------- scroll -------
+ */
+
+.container .scroll {
+    height: 600px;
+    overflow-y: scroll;
+}
